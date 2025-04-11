@@ -1,0 +1,2353 @@
+Attachment index.html added.Conversation opened. 1 unread message.
+
+Skip to content
+Using Gmail with screen readers
+2 of 11,477
+FINAL CODE
+Inbox
+
+Mridul Bairathi
+Attachments
+4:00 PM (5 minutes ago)
+to me
+
+
+ One attachment
+  •  Scanned by Gmail
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoCircuit | E-Waste Management Solutions</title>
+    <style>
+        :root {
+            --primary-green: #2e8b57;
+            --light-green: #98fb98;
+            --very-light-green: #f0fff0;
+            --white: #ffffff;
+            --dark-text: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--very-light-green);
+            color: var(--dark-text);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-green);
+            color: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--light-green);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(46, 139, 87, 0.8), rgba(46, 139, 87, 0.9)), url('/api/placeholder/1200/600') center/cover;
+            color: var(--white);
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--white);
+            color: var(--primary-green);
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--light-green);
+            transform: translateY(-3px);
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-green);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-img {
+            height: 200px;
+            background-color: var(--light-green);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            color: var(--primary-green);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-green);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 3rem;
+        }
+
+        .feature {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature h3 {
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-list li {
+            margin-bottom: 1rem;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .feature-list li:before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+            color: var(--primary-green);
+        }
+
+        .contact {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary-green);
+        }
+
+        textarea.form-input {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .btn-submit {
+            background-color: var(--primary-green);
+            color: var(--white);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-submit:hover {
+            background-color: #236b43;
+        }
+
+        footer {
+            background-color: var(--primary-green);
+            color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: left;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: var(--light-green);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+            text-decoration: underline;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-icon {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: var(--white);
+            color: var(--primary-green);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            background-color: var(--light-green);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .calculator {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+        }
+
+        .calculator h3 {
+            color: var(--primary-green);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .calculator-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .calculator-item label {
+            margin-bottom: 0.5rem;
+        }
+
+        .calculator-results {
+            background-color: var(--light-green);
+            padding: 1rem;
+            border-radius: 4px;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .result-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-green);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .stat-item {
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--dark-text);
+        }
+
+        /* New styles for battery marketplace */
+        .marketplace-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .tab {
+            padding: 1rem 2rem;
+            background-color: var(--white);
+            color: var(--primary-green);
+            border: 2px solid var(--primary-green);
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .tab:first-child {
+            border-radius: 4px 0 0 4px;
+        }
+
+        .tab:last-child {
+            border-radius: 0 4px 4px 0;
+        }
+
+        .tab.active {
+            background-color: var(--primary-green);
+            color: var(--white);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-img {
+            height: 180px;
+            background-color: var(--light-green);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            color: var(--primary-green);
+        }
+
+        .product-content {
+            padding: 1.5rem;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-green);
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .product-specs {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .product-spec {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .add-to-cart {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: var(--primary-green);
+            color: var(--white);
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .add-to-cart:hover {
+            background-color: #236b43;
+        }
+
+        .sell-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .sell-option {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .sell-option h3 {
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+
+        .sell-option p {
+            margin-bottom: 1.5rem;
+        }
+
+        .sell-form {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+        }
+
+        .cart-indicator {
+            position: relative;
+            margin-left: 1rem;
+        }
+
+        .cart-icon {
+            font-size: 1.5rem;
+            color: var(--white);
+            cursor: pointer;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: var(--light-green);
+            color: var(--primary-green);
+            font-size: 0.8rem;
+            font-weight: bold;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cart-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cart-content {
+            background-color: var(--white);
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            border-radius: 8px;
+            overflow-y: auto;
+            padding: 2rem;
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .cart-close {
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cart-items {
+            margin-bottom: 2rem;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .cart-item-info {
+            flex: 1;
+        }
+
+        .cart-item-title {
+            font-weight: 600;
+        }
+
+        .cart-item-price {
+            color: var(--primary-green);
+        }
+
+        .cart-item-remove {
+            background: none;
+            border: none;
+            color: #ff0000;
+            cursor: pointer;
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+
+        .coupon-notification {
+            display: none;
+            background-color: var(--light-green);
+            padding: 1rem;
+            border-radius: 4px;
+            margin-top: 1rem;
+            text-align: center;
+            font-weight: bold;
+            color: var(--primary-green);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                background: none;
+                border: none;
+                color: var(--white);
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .marketplace-tabs {
+                flex-direction: column;
+            }
+
+            .tab {
+                border-radius: 4px;
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        .mobile-menu-btn {
+            display: none;
+        }
+
+        @media (max-width: 480px) {
+            .stats {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        :root {
+            --primary: #118c4f;
+            --secondary: #0a5c32;
+            --accent: #66bb6a;
+            --light-bg: #f5f5f5;
+            --gray: #757575;
+            --light-gray: #e0e0e0;
+            --white: #ffffff;
+            --shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-bg);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 15px 0;
+            box-shadow: var(--shadow);
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-icon {
+            margin-right: 10px;
+            font-size: 28px;
+        }
+        
+        .tracking-container {
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .tracking-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--light-gray);
+            margin-bottom: 20px;
+        }
+        
+        .tracking-id {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .tracking-date {
+            color: var(--gray);
+        }
+        
+        .tracking-status {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin: 40px 20px;
+        }
+        
+        .status-line {
+            position: absolute;
+            top: 15px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--light-gray);
+            z-index: 1;
+        }
+        
+        .status-line-progress {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 75%;
+            height: 100%;
+            background-color: var(--accent);
+        }
+        
+        .status-step {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            width: 20%;
+        }
+        
+        .status-circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: var(--white);
+            border: 3px solid var(--light-gray);
+            margin: 0 auto 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .status-step.completed .status-circle {
+            background-color: var(--accent);
+            border-color: var(--accent);
+            color: white;
+        }
+        
+        .status-step.current .status-circle {
+            background-color: var(--white);
+            border-color: var(--accent);
+            border-width: 3px;
+        }
+        
+        .status-label {
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .status-date {
+            font-size: 12px;
+            color: var(--gray);
+            margin-top: 5px;
+        }
+        
+        .tracking-details {
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        
+        .detail-row {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        
+        .detail-label {
+            width: 30%;
+            font-weight: 500;
+            color: var(--gray);
+        }
+        
+        .detail-value {
+            width: 70%;
+            font-weight: 500;
+        }
+        
+        .tracking-timeline {
+            margin-top: 30px;
+        }
+        
+        .timeline-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            padding-bottom: 20px;
+            border-left: 2px solid var(--light-gray);
+            margin-left: 15px;
+        }
+        
+        .timeline-item:last-child {
+            border-left: 2px solid transparent;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: -11px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            border: 3px solid var(--white);
+        }
+        
+        .timeline-item.completed .timeline-dot {
+            background-color: var(--accent);
+        }
+        
+        .timeline-item.current .timeline-dot {
+            background-color: var(--white);
+            border: 3px solid var(--accent);
+        }
+        
+        .timeline-item.pending .timeline-dot {
+            background-color: var(--light-gray);
+        }
+        
+        .timeline-content {
+            padding: 0 0 0 15px;
+        }
+        
+        .timeline-time {
+            font-size: 14px;
+            color: var(--gray);
+            margin-bottom: 5px;
+        }
+        
+        .timeline-text {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        
+        .timeline-location {
+            font-size: 14px;
+            color: var(--gray);
+        }
+        
+        .battery-info {
+            margin-top: 30px;
+            display: flex;
+            border: 1px solid var(--light-gray);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .battery-image {
+            width: 120px;
+            background-color: var(--light-bg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .battery-details {
+            padding: 15px;
+            flex-grow: 1;
+        }
+        
+        .battery-type {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .battery-meta {
+            font-size: 14px;
+            color: var(--gray);
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            text-align: center;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background-color: rgba(17, 140, 79, 0.1);
+        }
+        
+        .recycling-impact {
+            margin-top: 30px;
+            background-color: #e8f5e9;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+        }
+        
+        .impact-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: var(--secondary);
+        }
+        
+        .impact-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+        
+        .impact-stat {
+            text-align: center;
+            width: 30%;
+        }
+        
+        .impact-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        .impact-label {
+            font-size: 14px;
+            color: var(--gray);
+        }
+        
+        @media (max-width: 768px) {
+            .status-label {
+                font-size: 12px;
+            }
+            
+            .detail-row {
+                flex-direction: column;
+            }
+            
+            .detail-label, .detail-value {
+                width: 100%;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+            
+            .battery-info {
+                flex-direction: column;
+            }
+            
+            .battery-image {
+                width: 100%;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container"> 
+            <nav>
+                <div class="logo">
+                    <span>BIJLI wala⚡</span>
+                </div>
+                <button class="mobile-menu-btn">≡</button>
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#solutions">Solutions</a>
+                    <a href="#ev-batteries">EV Batteries</a>
+                    <a href="#single-use">Single-use Tech</a>
+                    <a href="#marketplace">Marketplace</a>
+                    <a href="#calculator">Calculator</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <div id="auth-buttons" style="display: flex; gap: 1rem;">
+                        <a href="#login" class="btn">Login</a>
+                        <a href="#signup" class="btn">Sign Up</a>
+                      </div>
+                      
+                      <!-- Logout Button (hidden by default) -->
+                      <div id="logout-button" style="display: none;">
+                        <button class="btn" onclick="logout()">Logout</button>
+                      </div>
+                    <div class="cart-indicator">
+                        <div class="cart-icon" id="cart-icon">🛒</div>
+                        <div class="cart-count" id="cart-count">0</div>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Sustainable E-Waste Management Solutions</h1>
+            <p>Join us in creating a circular economy for electronic waste, from retired EV batteries to single-use tech
+                products.</p>
+            <a href="#solutions" class="btn">Explore Solutions</a>
+        </div>
+    </section>
+
+    <section id="solutions" class="section">
+        <div class="container">
+            <h2 class="section-title">Our E-Waste Solutions</h2>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="5000">0</div>
+                    <div class="stat-label">Tons of E-Waste Recycled</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="85">0</div>
+                    <div class="stat-label">Percent Materials Recovered</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="3500">0</div>
+                    <div class="stat-label">EV Batteries Repurposed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="120">0</div>
+                    <div class="stat-label">Collection Sites</div>
+                </div>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="card-img"><img src="https://www.laserax.com/sites/default/files/public/ev-battery-cell-types.jpg" width="418.88" height="200">
+                    </div>
+                    <img src="" alt="" srcset="">
+                    <div class="card-content">
+                        <h3 class="card-title">EV Battery Solutions</h3>
+                        <p>Give retired EV batteries a second life through repurposing, refurbishment, and responsible
+                            recycling practices.</p>
+                        <a href="#ev-batteries" class="btn">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-img"><img
+                            src="https://www.thecardiologyadvisor.com/wp-content/uploads/sites/17/2023/03/Vaping.E-Cigarette_G_1417608370.jpg"
+                            width="418.88" height="200">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Single-use Tech Recycling</h3>
+                        <p>Tackle the growing problem of disposable electronics through better design, collection, and
+                            consumer education.</p>
+                        <a href="#single-use" class="btn">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-img">♻️</div>
+                    <div class="card-content">
+                        <h3 class="card-title">E-Waste Management Services</h3>
+                        <p>Comprehensive e-waste management solutions for businesses, municipalities, and individuals.
+                        </p>
+                        <a href="#contact" class="btn">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ev-batteries" class="section" style="background-color: var(--very-light-green);">
+        <div class="container">
+            <h2 class="section-title">Retired EV Batteries Solutions</h2>
+
+            <div class="features">
+                <div class="feature">
+                    <h3>Second-life Applications</h3>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Energy Storage Systems (ESS)</strong>
+                            <p>Repurpose old EV batteries for solar/wind energy storage, providing sustainable power
+                                solutions.</p>
+                        </li>
+                        <li>
+                            <strong>Backup Power for Buildings</strong>
+                            <p>Use them in UPS systems or grid backup solutions to provide emergency power.</p>
+                        </li>
+                        <li>
+                            <strong>Low-power Mobility</strong>
+                            <p>Give batteries new life in electric scooters, forklifts, or golf carts.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="feature">
+                    <h3>Battery Refurbishment & Recycling</h3>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Battery Refurbishment</strong>
+                            <p>Extract healthy cells and rebuild into smaller batteries for various applications.</p>
+                        </li>
+                        <li>
+                            <strong>Recycling & Material Recovery</strong>
+                            <p>Use advanced recycling techniques to recover valuable materials like lithium, nickel,
+                                cobalt, and copper.</p>
+                        </li>
+                        <li>
+                            <strong>Manufacturer Take-Back Programs</strong>
+                            <p>Mandate or incentivize manufacturers to collect and recycle old batteries.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="calculator" id="battery-calculator">
+                <h3>EV Battery Value Calculator</h3>
+                <form id="battery-calc-form">
+                    <div class="calculator-grid">
+                        <div class="calculator-item">
+                            <label for="battery-capacity">Battery Capacity (kWh)</label>
+                            <input type="number" id="battery-capacity" min="0" value="60">
+                        </div>
+                        <div class="calculator-item">
+                            <label for="battery-health">Battery Health (%)</label>
+                            <input type="number" id="battery-health" min="0" max="100" value="70">
+                        </div>
+                        <div class="calculator-item">
+                            <label for="battery-chemistry">Battery Chemistry</label>
+                            <select id="battery-chemistry" class="form-input">
+                                <option value="nmc">Lithium NMC</option>
+                                <option value="lfp">Lithium Iron Phosphate</option>
+                                <option value="nca">Lithium NCA</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Calculate Value</button>
+                </form>
+                <div id="battery-results" class="calculator-results" style="display: none;">
+                    <p>Estimated second-life value: <span id="battery-value" class="result-value">$0</span></p>
+                    <p>Potential energy storage capacity: <span id="energy-capacity" class="result-value">0 kWh</span>
+                    </p>
+                    <p>Materials recovery value: <span id="materials-value" class="result-value">$0</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Marketplace Section -->
+    <section id="marketplace" class="section">
+        <div class="container">
+            <h2 class="section-title">Battery Marketplace</h2>
+
+            <div class="marketplace-tabs">
+                <div class="tab active" data-tab="buy">Buy Batteries</div>
+                <div class="tab" data-tab="sell">Sell Batteries</div>
+            </div>
+
+            <div id="buy-tab" class="tab-content active">
+                <div class="product-grid">
+                    <div class="product-card" data-id="1" data-price="599.99" data-name="Tesla Model S Battery Module">
+                        <div class="product-img"><img src="https://cdn.prod.website-files.com/623f5e1b7d1948ce2ead704b/62454d4e0988713196d05cfb_Tesla1.jpg" width="268.58" height="180" ></div>
+                        <div class="product-content">
+                            <h3 class="product-title">Tesla Model S Battery Module (Refurbished)</h3>
+                            <div class="product-price">$599.99</div>
+                            <div class="product-specs">
+                                <div class="product-spec">
+                                    <span>Capacity:</span>
+                                    <span>5.3 kWh</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span>Chemistry:</span>
+                                    <span>NCA</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span>Health:</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span>Warranty:</span>
+                                    <span>1 Year</span>
+                                </div>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-id="2" data-price="299.99" data-name="Nissan Leaf Battery Pack">
+                        <div class="product-img"><img src="https://cdn.prod.website-files.com/623f5e1b7d1948ce2ead704b/624598faf92b5846886ec7b0_Leafpack2.jpg" width="268.58" height="180"></div>
+                        <div class="product-content">
+                            <h3 class="product-title">Nissan Leaf Battery Pack (Refurbished)</h3>
+                            <div class="product-price">$299.99</div>
+                            <div class="product-specs">
+                                <div class="product-spec">
+                                    <span>Capacity:</span>
+                                    <span>3.8 kWh</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span>Chemistry:</span>
+                                    <span>LMO</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span>Health:</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span>Warranty:</span>
+                                    <span>6 Months</span>
+                                </div>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-id="3" data-price="449.99" data-name="BMW i3 Battery Module">
+                        <div class="product-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR9Jw2gcTW4NihdA7RFu8Qe8VtCMzmzMJRKQ&s" width="268.58" height="180"></div>
+                        <div class="product-content">
+                            <h3 class="product-title">BMW i3 Battery Module (Refurbished)</h3>
+                            <div class="product-price">$449.99</div>
+                            <div class="product-specs">
+                                <div class="product-spec">
+                                    <span>Capacity:</span>
+                                    <span>4.5 kWh</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span>Chemistry:</span>
+                                    <span>NMC</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span>Health:</span>
+                                    <span>88%</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span>Warranty:</span>
+                                    <span>1 Year</span>
+                                </div>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-id="4" data-price="799.99" data-name="Powerwall-Compatible Battery">
+                        -<div class="product-img"><img src="https://images.squarespace-cdn.com/content/655ca2b0f826bb7b2b4dfe90/1700569797041-84NTXY9QVSEPMVG8O09W/?content-type=image%2Fpng" width="268.58" height="180"></div>
+                        <div class="product-content">
+                            <h3 class="product-title">Powerwall-Compatible Battery (New)</h3>
+                            <div class="product-price">$799.99</div>
+                            <div class="product-specs">
+                                <div class="product-spec">
+                                    <span>Capacity:</span>
+                                    <span>13.5 kWh</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span>Chemistry:</span>
+                                    <span>LFP</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span>Health:</span>
+                                    <span>100%</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span>Warranty:</span>
+                                    <span>2 Years</span>
+                                </div>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sell-tab" class="tab-content">
+                <div class="sell-options">
+                    <div class="sell-option">
+                        <h3>Sell to Manufacturer</h3>
+                        <p>Return your battery to the original manufacturer for proper recycling and potential credit
+                            toward future purchases.</p>
+                        <button class="btn sell-option-btn" data-option="manufacturer">Select Option</button>
+                    </div>
+
+                    <div class="sell-option">
+                        <h3>Sell to Other Users</h3>
+                        <p>List your used battery on our marketplace for other users to purchase for second-life
+                            applications.</p>
+                        <button class="btn sell-option-btn" data-option="users">Select Option</button>
+                    </div>
+
+                    <div class="sell-option">
+                        <h3>Sell for Recycling</h3>
+                        <p>Receive a coupon equal to the value of your recycled battery for your next tech purchase.</p>
+                        <button class="btn sell-option-btn" data-option="recycling">Select Option</button>
+                    </div>
+                </div>
+
+                <div class="sell-form" id="manufacturer-form" style="display: none;">
+                    <h3>Sell Battery to Manufacturer</h3>
+                    <form id="manufacturer-sell-form">
+                        <div class="form-group">
+                            <label for="manufacturer">Manufacturer</label>
+                            <select id="manufacturer" class="form-input" required>
+                                <option value="">Select manufacturer</option>
+                                <option value="tesla">Tesla</option>
+                                <option value="nissan">Nissan</option>
+                                <option value="bmw">BMW</option>
+                                <option value="lg">LG</option>
+                                <option value="panasonic">Panasonic</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="battery-model">Battery Model</label>
+                            <input type="text" id="battery-model" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="battery-age">Battery Age (years)</label>
+                            <input type="number" id="battery-age" class="form-input" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="battery-condition">Battery Condition</label>
+                            <select id="battery-condition" class="form-input" required>
+                                <option value="">Select condition</option>
+                                <option value="excellent">Excellent</option>
+                                <option value="good">Good</option>
+                                <option value="fair">Fair</option>
+                                <option value="poor">Poor</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Submit Request</button>
+                    </form>
+                </div>
+
+                <div class="sell-form" id="users-form" style="display: none;">
+                    <h3>Sell Battery to Other Users</h3>
+                    <form id="users-sell-form">
+                        <div class="form-group">
+                            <label for="battery-type">Battery Type</label>
+                            <select id="battery-type" class="form-input" required>
+                                <option value="">Select type</option>
+                                <option value="ev">EV Battery</option>
+                                <option value="home">Home Energy Storage</option>
+                                <option value="portable">Portable Power</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="battery-capacity-sell">Battery Capacity (kWh)</label>
+                            <input type="number" id="battery-capacity-sell" class="form-input" min="0" step="0.1"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="battery-health-sell">Battery Health (%)</label>
+                            <input type="number" id="battery-health-sell" class="form-input" min="0" max="100" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="asking-price">Asking Price ($)</label>
+                            <input type="number" id="asking-price" class="form-input" min="0" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="battery-description">Description</label>
+                            <textarea id="battery-description" class="form-input" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-submit">List for Sale</button>
+                    </form>
+                </div>
+
+                <div class="sell-form" id="recycling-form" style="display: none;">
+                    <h3>Sell Battery for Recycling</h3>
+                    <form id="recycling-sell-form">
+                        <div class="form-group">
+                            <label for="battery-type-recycle">Battery Type</label>
+                            <select id="battery-type-recycle" class="form-input" required>
+                                <option value="">Select type</option>
+                                <option value="ev">EV Battery</option>
+                                <option value="home">Home Energy Storage</option>
+                                <option value="portable">Portable Power</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="battery-weight">Estimated Weight (kg)</label>
+                            <input type="number" id="battery-weight" class="form-input" min="0" step="0.1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="battery-chemistry-recycle">Battery Chemistry</label>
+                            <select id="battery-chemistry-recycle" class="form-input" required>
+                                <option value="">Select chemistry</option>
+                                <option value="lithium-ion">Lithium-ion</option>
+                                <option value="lfp">Lithium Iron Phosphate</option>
+                                <option value="lead-acid">Lead Acid</option>
+                                <option value="nimh">NiMH</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="pickup-address">Pickup Address</label>
+                            <textarea id="pickup-address" class="form-input" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Submit for Recycling</button>
+                    </form>
+                    <div class="coupon-notification" id="recycling-coupon">
+                        Congratulations! You've received a coupon worth <span id="coupon-value">$0</span> to use on your
+                        next tech purchase.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="single-use" class="section" style="background-color: var(--very-light-green);">
+        <div class="container">
+            <h2 class="section-title">Single-use Tech Products Solutions</h2>
+
+            <div class="features">
+                <div class="feature">
+                    <h3>Design & Collection Solutions</h3>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Design for Disassembly</strong>
+                            <p>Make products modular and easier to take apart for recycling or repair.</p>
+                        </li>
+                        <li>
+                            <strong>Public Collection Drives</strong>
+                            <p>Setup e-waste bins in public areas and retail stores for convenient disposal.</p>
+                        </li>
+                        <li>
+                            <strong>E-waste Tracking Systems</strong>
+                            <p>Implement systems to trace and manage e-waste properly from source to recycling.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="feature">
+                    <h3>Consumer Education</h3>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Awareness Campaigns</strong>
+                            <p>Educate consumers about the environmental impact of e-waste and proper disposal methods.
+                            </p>
+                        </li>
+                        <li>
+                            <strong>School Programs</strong>
+                            <p>Develop educational materials for schools to teach students about e-waste management.</p>
+                        </li>
+                        <li>
+                            <strong>Community Workshops</strong>
+                            <p>Organize repair workshops to extend the life of electronic devices.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculator" class="section">
+        <div class="container">
+            <h2 class="section-title">E-Waste Impact Calculator</h2>
+
+            <div class="calculator">
+                <h3>Calculate Your E-Waste Impact</h3>
+                <form id="calculator-form">
+                    <div class="calculator-grid">
+                        <div class="calculator-item">
+                            <label for="phones">Smartphones</label>
+                            <input type="number" id="phones" min="0" value="1">
+                        </div>
+                        <div class="calculator-item">
+                            <label for="laptops">Laptops</label>
+                            <input type="number" id="laptops" min="0" value="1">
+                        </div>
+                        <div class="calculator-item">
+                            <label for="batteries">Batteries (kg)</label>
+                            <input type="number" id="batteries" min="0" value="1">
+                        </div>
+                        <div class="calculator-item">
+                            <label for="earbuds">Wireless Earbuds</label>
+                            <input type="number" id="earbuds" min="0" value="0">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Calculate Impact</button>
+                </form>
+                <div id="calculator-results" class="calculator-results" style="display: none;">
+                    <p>Total weight of e-waste: <span id="total-weight" class="result-value">0 kg</span></p>
+                    <p>CO2 emissions saved by recycling: <span id="co2-saved" class="result-value">0 kg</span></p>
+                    <p>Material value recoverable: <span id="material-value" class="result-value">$0</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section" style="background-color: var(--very-light-green);">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+
+            <div class="contact">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="form-input" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <button class="cart-close" id="cart-close">✕</button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be added here dynamically -->
+                <div class="cart-empty">Your cart is empty.</div>
+            </div>
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-amount">$0.00</span>
+            </div>
+            <button class="btn btn-submit" id="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">♻️</span> EcoBattery Recycling
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="tracking-container">
+            <div class="tracking-header">
+                <div class="tracking-id">Tracking ID: ECO-BTR-247891</div>
+                <div class="tracking-date">Recycling Started: April 8, 2025</div>
+            </div>
+            
+            <div class="tracking-status">
+                <div class="status-line">
+                    <div class="status-line-progress"></div>
+                </div>
+                
+                <div class="status-step completed">
+                    <div class="status-circle">✓</div>
+                    <div class="status-label">Collection</div>
+                    <div class="status-date">Apr 8</div>
+                </div>
+                
+                <div class="status-step completed">
+                    <div class="status-circle">✓</div>
+                    <div class="status-label">Sorting</div>
+                    <div class="status-date">Apr 9</div>
+                </div>
+                
+                <div class="status-step completed">
+                    <div class="status-circle">✓</div>
+                    <div class="status-label">Processing</div>
+                    <div class="status-date">Apr 10</div>
+                </div>
+                
+                <div class="status-step current">
+                    <div class="status-circle"></div>
+                    <div class="status-label">Material Recovery</div>
+                    <div class="status-date">In Progress</div>
+                </div>
+                
+                <div class="status-step">
+                    <div class="status-circle"></div>
+                    <div class="status-label">Complete</div>
+                    <div class="status-date">Estimated Apr 13</div>
+                </div>
+            </div>
+            
+            <div class="tracking-details">
+                <div class="detail-row">
+                    <div class="detail-label">Current Facility</div>
+                    <div class="detail-value">Advanced Material Recovery Center, Green Valley</div>
+                </div>
+                
+                <div class="detail-row">
+                    <div class="detail-label">Recycling Method</div>
+                    <div class="detail-value">Hydrometallurgical Process</div>
+                </div>
+                
+                <div class="detail-row">
+                    <div class="detail-label">Expected Completion</div>
+                    <div class="detail-value">April 13, 2025</div>
+                </div>
+                
+                <div class="detail-row">
+                    <div class="detail-label">Recycling Partner</div>
+                    <div class="detail-value">EcoMetal Solutions Inc.</div>
+                </div>
+            </div>
+            
+            <div class="battery-info">
+                <div class="battery-image">
+                    <img src="/api/placeholder/100/100" alt="Lithium-ion Battery" />
+                </div>
+                <div class="battery-details">
+                    <div class="battery-type">Lithium-ion Battery</div>
+                    <div class="battery-meta">Quantity: 2 • Weight: 450g • Chemistry: LiCoO2</div>
+                    <div class="battery-meta">Collection Point: EcoDrop Station, Downtown</div>
+                </div>
+            </div>
+            
+            <div class="tracking-timeline">
+                <h3 class="timeline-title">Recycling Timeline</h3>
+                
+                <div class="timeline-item completed">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-time">April 8, 2025 • 10:24 AM</div>
+                        <div class="timeline-text">Battery received at collection point</div>
+                        <div class="timeline-location">EcoDrop Station, Downtown</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item completed">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-time">April 8, 2025 • 5:38 PM</div>
+                        <div class="timeline-text">Battery transported to recycling facility</div>
+                        <div class="timeline-location">EcoDrop Logistics</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item completed">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-time">April 9, 2025 • 9:15 AM</div>
+                        <div class="timeline-text">Battery sorted and classified</div>
+                        <div class="timeline-location">Regional Sorting Center</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item completed">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-time">April 10, 2025 • 11:42 AM</div>
+                        <div class="timeline-text">Initial processing and discharge completed</div>
+                        <div class="timeline-location">Advanced Material Recovery Center</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item current">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-time">April 11, 2025 • 8:30 AM</div>
+                        <div class="timeline-text">Material recovery process started</div>
+                        <div class="timeline-location">Advanced Material Recovery Center</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item pending">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-time">Estimated April 13, 2025</div>
+                        <div class="timeline-text">Material recovery and processing complete</div>
+                        <div class="timeline-location">Advanced Material Recovery Center</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="recycling-impact">
+                <div class="impact-title">Your Environmental Impact</div>
+                <p>By recycling these batteries, you're helping to conserve natural resources and prevent hazardous materials from entering landfills.</p>
+                
+                <div class="impact-stats">
+                    <div class="impact-stat">
+                        <div class="impact-value">120g</div>
+                        <div class="impact-label">Metals Recovered</div>
+                    </div>
+                    
+                    <div class="impact-stat">
+                        <div class="impact-value">1.2kg</div>
+                        <div class="impact-label">CO₂ Prevented</div>
+                    </div>
+                    
+                    <div class="impact-stat">
+                        <div class="impact-value">2L</div>
+                        <div class="impact-label">Water Saved</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="btn btn-primary">Download Certificate</button>
+                <button class="btn btn-outline">Contact Support</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>EcoCircuit</h3>
+                    <p>Sustainable e-waste management solutions for a cleaner, greener future.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">f</a>
+                        <a href="#" class="social-icon">in</a>
+                        <a href="#" class="social-icon">t</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#solutions">Solutions</a></li>
+                        <li><a href="#ev-batteries">EV Batteries</a></li>
+                        <li><a href="#marketplace">Marketplace</a></li>
+                        <li><a href="#single-use">Single-use Tech</a></li>
+                        <li><a href="#calculator">Calculator</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li>123 Green Street</li>
+                        <li>Eco City, EC 12345</li>
+                        <li>info@ecocircuit.com</li>
+                        <li>(555) 123-4567</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 EcoCircuit. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Show/hide buttons based on login state
+        if (localStorage.getItem('loggedIn') === 'true') {
+            document.getElementById('auth-buttons').style.display = 'none';
+            document.getElementById('logout-button').style.display = 'block';
+        }
+        function logout() {
+            localStorage.removeItem('loggedIn');
+            alert('Logged out successfully!');
+            document.getElementById('auth-buttons').style.display = 'flex';
+            document.getElementById('logout-button').style.display = 'none';
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Mobile menu toggle
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', function () {
+                    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+                });
+            }
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+
+                        // Close mobile menu if open
+                        if (window.innerWidth <= 768) {
+                            navLinks.style.display = 'none';
+                        }
+                    }
+                });
+            });
+
+            // Form submission
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    alert('Thank you for contacting us! We will get back to you soon.');
+                    contactForm.reset();
+                });
+            }
+
+            // E-waste calculator
+            const calculatorForm = document.getElementById('calculator-form');
+            if (calculatorForm) {
+                calculatorForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    const phones = parseInt(document.getElementById('phones').value) || 0;
+                    const laptops = parseInt(document.getElementById('laptops').value) || 0;
+                    const batteries = parseInt(document.getElementById('batteries').value) || 0;
+                    const earbuds = parseInt(document.getElementById('earbuds').value) || 0;
+
+                    const totalWeight = (phones * 0.15) + (laptops * 2.5) + (batteries * 0.5) + (earbuds * 0.02);
+                    const co2Saved = totalWeight * 20;
+                    const materialValue = totalWeight * 10;
+
+                    document.getElementById('total-weight').textContent = totalWeight.toFixed(2) + ' kg';
+                    document.getElementById('co2-saved').textContent = co2Saved.toFixed(2) + ' kg';
+                    document.getElementById('material-value').textContent = '$' + materialValue.toFixed(2);
+
+                    document.getElementById('calculator-results').style.display = 'block';
+                });
+            }
+
+            // Battery value calculator
+            const batteryCalcForm = document.getElementById('battery-calc-form');
+            if (batteryCalcForm) {
+                batteryCalcForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    const capacity = parseFloat(document.getElementById('battery-capacity').value) || 0;
+                    const health = parseFloat(document.getElementById('battery-health').value) || 0;
+                    const chemistry = document.getElementById('battery-chemistry').value;
+
+                    const chemistryMultipliers = {
+                        'nmc': 1.2,
+                        'lfp': 1.0,
+                        'nca': 1.3
+                    };
+
+                    const multiplier = chemistryMultipliers[chemistry] || 1.0;
+                    const secondLifeValue = capacity * (health / 100) * multiplier * 30;
+                    const energyCapacity = capacity * (health / 100);
+                    const materialsValue = capacity * multiplier * 15;
+
+                    document.getElementById('battery-value').textContent = '$' + secondLifeValue.toFixed(2);
+                    document.getElementById('energy-capacity').textContent = energyCapacity.toFixed(1) + ' kWh';
+                    document.getElementById('materials-value').textContent = '$' + materialsValue.toFixed(2);
+
+                    document.getElementById('battery-results').style.display = 'block';
+                });
+            }
+
+            // Animated counters for stats
+            const statsSection = document.querySelector('.stats');
+            const statNumbers = document.querySelectorAll('.stat-number');
+
+            if (statsSection && statNumbers.length) {
+                const animateStats = () => {
+                    statNumbers.forEach(stat => {
+                        const target = parseInt(stat.getAttribute('data-target'));
+                        let count = 0;
+                        const duration = 2000;
+                        const increment = target / (duration / 16);
+
+                        const updateCounter = () => {
+                            count += increment;
+                            if (count < target) {
+                                stat.textContent = Math.ceil(count);
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                stat.textContent = target;
+                            }
+                        };
+
+                        updateCounter();
+                    });
+                };
+
+                const isInViewport = (el) => {
+                    const rect = el.getBoundingClientRect();
+                    return (
+                        rect.top >= 0 &&
+                        rect.left >= 0 &&
+                        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                    );
+                };
+
+                let animated = false;
+                window.addEventListener('scroll', () => {
+                    if (!animated && isInViewport(statsSection)) {
+                        animateStats();
+                        animated = true;
+                    }
+                });
+
+                if (isInViewport(statsSection)) {
+                    animateStats();
+                    animated = true;
+                }
+            }
+
+            // Marketplace tab switching
+            const tabs = document.querySelectorAll('.tab');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const tabId = tab.getAttribute('data-tab');
+
+                    // Update active tab
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+
+                    // Show active tab content
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                        content.style.display = 'none';
+                    });
+
+                    const activeContent = document.getElementById(`${tabId}-tab`);
+                    if (activeContent) {
+                        activeContent.classList.add('active');
+                        activeContent.style.display = 'block';
+                    }
+                });
+            });
+
+            // Sell options
+            const sellOptionBtns = document.querySelectorAll('.sell-option-btn');
+            const sellForms = document.querySelectorAll('.sell-form');
+
+            sellOptionBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const option = btn.getAttribute('data-option');
+
+                    // Hide all forms
+                    sellForms.forEach(form => {
+                        form.style.display = 'none';
+                    });
+
+                    // Show selected form
+                    const selectedForm = document.getElementById(`${option}-form`);
+                    if (selectedForm) {
+                        selectedForm.style.display = 'block';
+                    }
+                });
+            });
+
+            // Shopping cart functionality
+            const cartItems = [];
+            const cartIcon = document.getElementById('cart-icon');
+            const cartModal = document.getElementById('cart-modal');
+            const cartClose = document.getElementById('cart-close');
+            const cartCount = document.getElementById('cart-count');
+            const cartItemsContainer = document.getElementById('cart-items');
+            const cartTotalAmount = document.getElementById('cart-total-amount');
+            const checkoutBtn = document.getElementById('checkout-btn');
+
+            // Show cart modal
+            cartIcon.addEventListener('click', () => {
+                cartModal.style.display = 'flex';
+                updateCartDisplay();
+            });
+
+            // Close cart modal
+            cartClose.addEventListener('click', () => {
+                cartModal.style.display = 'none';
+            });
+
+            // Close cart when clicking outside
+            window.addEventListener('click', (e) => {
+                if (e.target === cartModal) {
+                    cartModal.style.display = 'none';
+                }
+            });
+
+            // Add to cart buttons
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const productCard = button.closest('.product-card');
+                    const productId = productCard.getAttribute('data-id');
+                    const productName = productCard.getAttribute('data-name');
+                    const productPrice = parseFloat(productCard.getAttribute('data-price'));
+
+                    // Check if already in cart
+                    const existingItemIndex = cartItems.findIndex(item => item.id === productId);
+                    if (existingItemIndex > -1) {
+                        cartItems[existingItemIndex].quantity++;
+                    } else {
+                        cartItems.push({
+                            id: productId,
+                            name: productName,
+                            price: productPrice,
+                            quantity: 1
+                        });
+                    }
+
+                    updateCartCount();
+                    alert(`${productName} added to cart!`);
+                });
+            });
+
+            // Update cart count
+            function updateCartCount() {
+                const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
+                cartCount.textContent = totalItems;
+            }
+
+            // Update cart display
+            function updateCartDisplay() {
+                if (cartItems.length === 0) {
+                    cartItemsContainer.innerHTML = '<div class="cart-empty">Your cart is empty.</div>';
+                    cartTotalAmount.textContent = '$0.00';
+                    return;
+                }
+
+                let cartHTML = '';
+                let total = 0;
+
+                cartItems.forEach(item => {
+                    const itemTotal = item.price * item.quantity;
+                    total += itemTotal;
+
+                    cartHTML += `
+                        <div class="cart-item" data-id="${item.id}">
+                            <div class="cart-item-info">
+                                <div class="cart-item-title">${item.name}</div>
+                                <div class="cart-item-price">$${item.price.toFixed(2)} x ${item.quantity}</div>
+                            </div>
+                            <div>$${itemTotal.toFixed(2)}</div>
+                            <button class="cart-item-remove" data-id="${item.id}">✕</button>
+                        </div>
+                    `;
+                });
+
+                cartItemsContainer.innerHTML = cartHTML;
+                cartTotalAmount.textContent = `$${total.toFixed(2)}`;
+
+                // Add remove button event listeners
+                document.querySelectorAll('.cart-item-remove').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const itemId = e.target.getAttribute('data-id');
+                        removeFromCart(itemId);
+                    });
+                });
+            }
+
+            // Remove from cart
+            function removeFromCart(itemId) {
+                const index = cartItems.findIndex(item => item.id === itemId);
+                if (index > -1) {
+                    if (cartItems[index].quantity > 1) {
+                        cartItems[index].quantity--;
+                    } else {
+                        cartItems.splice(index, 1);
+                    }
+                    updateCartCount();
+                    updateCartDisplay();
+                }
+            }
+
+            // Checkout button
+            checkoutBtn.addEventListener('click', () => {
+                if (cartItems.length === 0) {
+                    alert('Your cart is empty.');
+                    return;
+                }
+
+                alert('Thank you for your purchase! Your order has been placed.');
+                cartItems.length = 0; // Clear cart
+                updateCartCount();
+                updateCartDisplay();
+                cartModal.style.display = 'none';
+            });
+
+            // Recycling form submission
+            const recyclingForm = document.getElementById('recycling-sell-form');
+            if (recyclingForm) {
+                recyclingForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    const batteryType = document.getElementById('battery-type-recycle').value;
+                    const batteryWeight = parseFloat(document.getElementById('battery-weight').value) || 0;
+                    const batteryChemistry = document.getElementById('battery-chemistry-recycle').value;
+
+                    // Calculate coupon value based on battery type, weight, and chemistry
+                    let valuePerKg = 0;
+
+                    if (batteryChemistry === 'lithium-ion') {
+                        valuePerKg = 20;
+                    } else if (batteryChemistry === 'lfp') {
+                        valuePerKg = 15;
+                    } else if (batteryChemistry === 'lead-acid') {
+                        valuePerKg = 10;
+                    } else if (batteryChemistry === 'nimh') {
+                        valuePerKg = 12;
+                    } else {
+                        valuePerKg = 8;
+                    }
+
+                    // Adjust for battery type
+                    if (batteryType === 'ev') {
+                        valuePerKg *= 1.5;
+                    } else if (batteryType === 'home') {
+                        valuePerKg *= 1.2;
+                    }
+
+                    const couponValue = batteryWeight * valuePerKg;
+
+                    // Display coupon notification
+                    document.getElementById('coupon-value').textContent = `$${couponValue.toFixed(2)}`;
+                    document.getElementById('recycling-coupon').style.display = 'block';
+
+                    // Reset form
+                    recyclingForm.reset();
+                });
+            }
+
+            // Manufacturer form submission
+            const manufacturerForm = document.getElementById('manufacturer-sell-form');
+            if (manufacturerForm) {
+                manufacturerForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    alert('Thank you! Your request has been submitted to the manufacturer. They will contact you for pickup arrangements.');
+                    manufacturerForm.reset();
+                });
+            }
+
+            // Users form submission
+            const usersForm = document.getElementById('users-sell-form');
+            if (usersForm) {
+                usersForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    alert('Your battery has been listed for sale! You will be notified when a buyer is interested.');
+                    usersForm.reset();
+                });
+            }
+            // Login/Signup modals
+            document.querySelector('a[href="#login"]').addEventListener('click', (e) => {
+            e.preventDefault();
+            toggleModal('login-modal', true);
+        });
+
+            document.querySelector('a[href="#signup"]').addEventListener('click', (e) => {
+                e.preventDefault();
+                toggleModal('signup-modal', true);
+            });
+
+            function toggleModal(id, show) {
+                const modal = document.getElementById(id);
+                if (modal) {
+                    modal.style.display = show ? 'flex' : 'none';
+                }
+            }
+
+            // Close modals on outside click
+            ['login-modal', 'signup-modal'].forEach(modalId => {
+                const modal = document.getElementById(modalId);
+                modal.addEventListener('click', e => {
+                    if (e.target === modal) modal.style.display = 'none';
+                });
+            });
+
+            // Form submissions (stub handlers)
+            document.getElementById('login-form')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+
+            const storedUser = JSON.parse(localStorage.getItem('user'));
+
+            if (storedUser && storedUser.email === email && storedUser.password === password) {
+                alert(`Welcome back, ${storedUser.name}!`);
+                localStorage.setItem('loggedIn', 'true');
+                document.getElementById('auth-buttons').style.display = 'none';  // ✅ Show/hide buttons here
+                document.getElementById('logout-button').style.display = 'block';
+                toggleModal('login-modal', false);
+            } else {
+                alert('Invalid email or password.');
+            }
+
+            this.reset();
+        });
+
+
+
+            document.getElementById('signup-form')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('signup-name').value;
+            const email = document.getElementById('signup-email').value;
+            const password = document.getElementById('signup-password').value;
+
+            const user = { name, email, password };
+
+            localStorage.setItem('user', JSON.stringify(user));
+            alert('Account created successfully!');
+            toggleModal('signup-modal', false);
+            this.reset();
+        });
+
+
+
+        });
+    </script>
+    <!-- Login Modal -->
+    <div class="cart-modal" id="login-modal">
+        <div class="cart-content" style="max-width: 400px;">
+            <div class="cart-header">
+                <h2>Login</h2>
+                <button class="cart-close" onclick="toggleModal('login-modal', false)">✕</button>
+            </div>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" class="form-input" required>
+                </div>
+                <button type="submit" class="btn btn-submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="cart-modal" id="signup-modal">
+        <div class="cart-content" style="max-width: 400px;">
+            <div class="cart-header">
+                <h2>Sign Up</h2>
+                <button class="cart-close" onclick="toggleModal('signup-modal', false)">✕</button>
+            </div>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="signup-name">Name</label>
+                    <input type="text" id="signup-name" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" class="form-input" required>
+                </div>
+                <button type="submit" class="btn btn-submit">Create Account</button>
+            </form>
+        </div>
+    </div>
+    
+
+</body>
+
+</html>
+
